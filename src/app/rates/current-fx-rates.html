@@ -1,0 +1,19 @@
+<form (ngSubmit)="onSubmit(currenciesForm)"  [formGroup]="currenciesForm">
+    <div class="d-flex justify-content-center p-2 bd-highlight">
+        <p-card *ngIf= "!error">
+            <h3>Eurų konvertavimas</h3>
+            <div class="input-group input-group-sm">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing">Eur</span>
+                </div>
+                <input type="number" formControlName="eur" min="0" pInputText placeholder="Result"
+                aria-describedby="inputGroup-sizing-sm">
+                <p-dropdown [options]="currency" formControlName="Currency" aria-describedby="inputGroup-sizing-sm"
+                    optionLabel="ccy"></p-dropdown>
+                <input  type="text" formControlName="result" style= "margin-LEFT: 30px" readonly pInputText placeholder="Result"
+                    aria-describedby="inputGroup-sizing-sm">
+            </div>
+        </p-card>
+    </div>
+
+</form>
