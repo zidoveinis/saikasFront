@@ -60,5 +60,8 @@ export class CurrentFxRates {
       this.res = eur * currency
       this.currenciesForm.controls.result.setValue(this.res.toFixed(4) + " " + this.currenciesForm.controls.Currency.value.ccy)
     }
+    else {
+      this.currenciesForm.controls.result.setValue(0 + " " + this.currenciesForm.controls.Currency.value.ccy)
+    }
   }
 }
